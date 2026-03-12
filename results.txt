@@ -1,0 +1,42 @@
+Columns:
+('id', 'int(11)', 'NO', 'PRI', None, 'auto_increment')
+('name', 'varchar(100)', 'YES', '', None, '')
+('email', 'varchar(100)', 'NO', '', None, '')
+('password', 'varchar(255)', 'NO', '', None, '')
+('role', "enum('admin','user')", 'YES', 'UNI', 'user', '')
+('phone', 'varchar(20)', 'YES', '', None, '')
+
+Data:
+
+Medicines Columns:
+('id', 'int(11)', 'NO', 'PRI', None, 'auto_increment')
+('name', 'varchar(100)', 'NO', '', None, '')
+('price', 'decimal(10,2)', 'NO', '', None, '')
+('stock', 'int(11)', 'NO', '', None, '')
+('requires_prescription', 'tinyint(1)', 'YES', '', '0', '')
+
+Medicines Data:
+(1, 'Paracetamol 500mg', Decimal('25.00'), 100, 0)
+(2, 'Amoxicillin 250mg', Decimal('120.00'), 50, 1)
+(3, 'Cetirizine', Decimal('30.00'), 80, 0)
+
+Medicines Columns:
+('id', 'int(11)', 'NO', 'PRI', None, 'auto_increment')
+('name', 'varchar(100)', 'NO', '', None, '')
+('price', 'decimal(10,2)', 'NO', '', None, '')
+('stock', 'int(11)', 'NO', '', None, '')
+('requires_prescription', 'tinyint(1)', 'YES', '', '0', '')
+
+Medicines Data:
+(1, 'Paracetamol 500mg', Decimal('25.00'), 100, 0)
+(2, 'Amoxicillin 250mg', Decimal('120.00'), 50, 1)
+(3, 'Cetirizine', Decimal('30.00'), 80, 0)
+
+Orders Columns:
+('id', 'int(11)', 'NO', 'PRI', None, 'auto_increment')
+('user_id', 'int(11)', 'YES', 'MUL', None, '')
+('total_amount', 'decimal(10,2)', 'YES', '', None, '')
+('status', "enum('pending','completed','cancelled')", 'YES', '', 'pending', '')
+('created_at', 'timestamp', 'NO', '', 'current_timestamp()', '')
+
+Orders Data:
